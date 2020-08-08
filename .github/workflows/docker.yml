@@ -16,12 +16,3 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: myorg/myrepository
           tags: latest
-
-          jobs:
-            build:
-              runs-on: ubuntu-latest
-              steps:
-              - uses: actions/checkout@master
-                with:
-                  fetch-depth: '0'
-              - name: Bump version and push tag
